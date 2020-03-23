@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Credit Card Form</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card-top">
+        <img src="img/sim.png" alt="Chip image" class="chip-img" />
+        <div class="franchise"><i class="fab fa-cc-visa"></i></div>
+      </div>
+      <div class="card-middle">
+        <span id="digit1">#</span><span id="digit2">#</span
+        ><span id="digit3">#</span><span id="digit4">#</span>&nbsp;
+
+        <span id="digit5">#</span><span id="digit6">#</span
+        ><span id="digit7">#</span><span id="digit8">#</span>&nbsp;
+
+        <span id="digit9">#</span><span id="digit10">#</span
+        ><span id="digit11">#</span><span id="digit12">#</span>&nbsp;
+
+        <span id="digit13">#</span><span id="digit14">#</span
+        ><span id="digit15">#</span><span id="digit16">#</span>
+      </div>
+      <div class="card-bottom">
+        <div class="card-holder">John Walsh</div>
+        <div class="card-date">
+          <span id="card-month">MM</span>/<span class="card-year">YY</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <form id="form">
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group">
+          <label for="cardHolder">Card Holder</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cardHolder"
+            placeholder=""
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="expirationDate">Expiration Date</label>
+            <select id="month" class="form-control">
+              <option value="0" selected="selected">Month</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="cvv">&nbsp;</label>
+            <select id="year" class="form-control">
+              <option value="0" selected="selected">Year</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="cvv">CVV</label>
+            <input type="text" class="form-control" id="cvv" placeholder="" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/95ca4230db.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
