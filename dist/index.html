@@ -14,19 +14,29 @@
   </head>
   <body>
     <div class="form-container">
-      <form class="form">
+      <form id="form">
         <div class="form-group">
           <label for="cardNumber">Card Number</label>
-          <input type="text" id="cardNumber" placeholder="" />
+          <input
+            type="text"
+            id="cardNumber"
+            class="form-control"
+            placeholder=""
+          />
         </div>
         <div class="form-group">
           <label for="cardHolder">Card Holder</label>
-          <input type="text" id="cardHolder" placeholder="" />
+          <input
+            type="text"
+            class="form-control"
+            id="cardHolder"
+            placeholder=""
+          />
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="expirationDate">Expiration Date</label>
-            <select id="month">
+            <select id="month" class="form-control">
               <option value="0" selected>Month</option>
               <option value="1" selected>01</option>
               <option value="2" selected>02</option>
@@ -43,7 +53,8 @@
             </select>
           </div>
           <div class="form-group col-md-4">
-            <select id="year">
+            <label for="cvv">&nbsp;</label>
+            <select id="year" class="form-control">
               <option value="0" selected>Year</option>
               <option value="2020" selected>2020</option>
               <option value="2021" selected>2021</option>
@@ -58,18 +69,7 @@
           </div>
           <div class="form-group col-md-4">
             <label for="cvv">CVV</label>
-            <select id="cvv">
-              <option value="0" selected>Year</option>
-              <option value="2020" selected>2020</option>
-              <option value="2021" selected>2021</option>
-              <option value="2022" selected>2022</option>
-              <option value="2023" selected>2023</option>
-              <option value="2024" selected>2024</option>
-              <option value="2025" selected>2025</option>
-              <option value="2026" selected>2026</option>
-              <option value="2027" selected>2027</option>
-              <option value="2028" selected>2028</option>
-            </select>
+            <input type="text" class="form-control" id="cvv" placeholder="" />
           </div>
         </div>
         <button type="submit" class="btn btn-primary">
