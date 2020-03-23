@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+.card-container {
+  width: 380px;
+  height: 210px;
+  max-width: 400px;
+  box-shadow: -1px 2px 43px 5px rgba(161, 161, 161, 0.81);
+  border-radius: 15px;
+  position: absolute;
+  top: 185px;
+  padding: 0.8em 0.8em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(182, 69, 69);
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
+
+  & .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.6em 0 0;
+
+    & .chip-img {
+      width: 70px;
+    }
+
+    & .fab {
+      font-size: 2.8rem;
+    }
+  }
+
+  & .card-middle {
+    font-size: 1.5rem;
+    padding: 0.1em 0 0.1em 0.5em;
+    font-weight: 700;
+    margin: 0.4em 0 0.6em 0;
+    letter-spacing: 2px;
+  }
+
+  & .card-labels {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.8em;
+    font-size: 0.8rem;
+  }
+
+  & .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 0 0.5em;
+    font-weight: 600;
+
+    & .card-holder::before {
+      content: 'Card Holder';
+      font-size: 0.8rem;
+      color: rgb(194, 196, 199);
+      display: block;
+    }
+
+    & .card-date::before {
+      content: 'Expire';
+      font-size: 0.8rem;
+      color: rgb(208, 209, 212);
+      display: block;
+    }
+  }
+}
