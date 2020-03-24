@@ -27,7 +27,9 @@
         width: 75px;
         opacity: 0.85; }
       .card-container .card-front .card-top .fab {
-        font-size: 3.2rem; }
+        font-size: 3.2rem;
+        font-weight: 400;
+        color: #e6e3e3; }
     .card-container .card-front .card-middle {
       font-size: 1.55rem;
       padding: 0.1em 0 0.1em 0.5em;

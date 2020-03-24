@@ -20,6 +20,9 @@ const cvvCard = document.querySelector('.card-cvv');
 
 const form = document.getElementById('form');
 
+const frontFran = document.querySelector('.franchise');
+const backFran = document.querySelector('franchise-back');
+
 //Show typed card number
 function showCardNum(numArr) {
   for (let i = 0; i < 16; i++) {
@@ -43,6 +46,28 @@ cardNumber.addEventListener('input', () => {
 
   if ((isNumber(cardNumber.value) && arr.length <= 16) || arr.length === 0) {
     showCardNum(arr);
+    switch (arr[0]) {
+      case '4':
+        frontFran.innerHTML = `<i class="fab fa-cc-visa"></i>`;
+        backFran.innerHTML = `<i class="fab fa-cc-visa"></i>`;
+        break;
+      case '5':
+        frontFran.innerHTML = `<i class="fab fa-cc-mastercard"></i>`;
+        backFran.innerHTML = `<i class="fab fa-cc-mastercard"></i>`;
+        break;
+      case '3':
+        frontFran.innerHTML = `<i class="fab fa-cc-amex"></i>`;
+        backFran.innerHTML = `<i class="fab fa-cc-amex"></i>`;
+        break;
+      case '6':
+        frontFran.innerHTML = `<i class="fab fa-cc-discover"></i>`;
+        backFran.innerHTML = `<i class="fab fa-cc-discover"></i>`;
+        break;
+      default:
+        frontFran.innerHTML = `<i class="fab fa-cc-visa"></i>`;
+        backFran.innerHTML = `<i class="fab fa-cc-visa"></i>`;
+        break;
+    }
   } else {
     arr.pop();
     cardNumber.value = arr.join('');
