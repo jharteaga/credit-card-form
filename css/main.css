@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 .card-container {
   width: 380px;
-  height: 210px;
+  height: 240px;
   max-width: 400px;
-  box-shadow: -1px 2px 43px 5px rgba(161, 161, 161, 0.81);
+  box-shadow: -1px 2px 38px 10px rgba(78, 77, 77, 0.81);
   border-radius: 15px;
   position: relative;
   top: 100px;
-  padding: 0.8em 0.8em;
+  padding: 1em 1.2em;
   display: flex;
   flex-direction: column;
-  background-color: #b64545;
+  background: #03021c;
+  background: linear-gradient(142deg, #03021c 0%, #070533 20%, #02001c 31%, #120b7a 75%, #060e25 93%, #10296b 100%);
   color: #fff;
   font-family: 'Inconsolata', monospace; }
   .card-container .card-top {
@@ -19,35 +21,31 @@
     align-items: center;
     padding: 0 0.6em 0 0; }
     .card-container .card-top .chip-img {
-      width: 70px; }
+      width: 75px; }
     .card-container .card-top .fab {
-      font-size: 2.8rem; }
+      font-size: 3.2rem; }
   .card-container .card-middle {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     padding: 0.1em 0 0.1em 0.5em;
     font-weight: 700;
-    margin: 0.4em 0 0.6em 0;
+    margin: 0.8em 0 0.6em 0;
     letter-spacing: 2px; }
-  .card-container .card-labels {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0.8em;
-    font-size: 0.8rem; }
   .card-container .card-bottom {
     display: flex;
     justify-content: space-between;
-    font-size: 1rem;
-    margin: 0 0.5em;
-    font-weight: 600; }
+    font-size: 1.1rem;
+    margin: 1em 0.5em 0;
+    font-weight: 600;
+    letter-spacing: 0.1em; }
     .card-container .card-bottom .card-holder::before {
       content: 'Card Holder';
       font-size: 0.8rem;
-      color: #c2c4c7;
+      color: #bdbec0;
       display: block; }
     .card-container .card-bottom .card-date::before {
       content: 'Expire';
       font-size: 0.8rem;
-      color: #d0d1d4;
+      color: #bdbec0;
       display: block; }
 
 * {
@@ -61,19 +59,124 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem; }
 
 .form-container {
-  width: 480px;
-  max-width: 500px;
-  box-shadow: -1px 2px 43px 5px rgba(161, 161, 161, 0.81);
-  padding: 8em 2em 2em 2em;
+  width: 500px;
+  max-width: 600px;
+  box-shadow: -1px 2px 43px 10px rgba(138, 135, 135, 0.81);
+  padding: 10em 2em 2em 2em;
   margin-bottom: 12em;
   border-radius: 15px; }
   .form-container button {
     width: 100%;
-    height: 2.8em;
-    border-radius: 7px; }
+    height: 2.6em;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background-color: #3258d4; }
+  .form-container label {
+    margin-bottom: 0.2em;
+    font-size: 0.85rem; }
+  .form-container input,
+  .form-container #month,
+  .form-container #year {
+    height: 3em;
+    margin-bottom: 1.8em; }
+
+@media screen and (max-width: 767px) and (min-width: 500px) {
+  .form-container {
+    width: 90%; }
+    .form-container .form-row #year {
+      margin-top: -30px; } }
+
+@media screen and (max-width: 499px) {
+  .form-container {
+    width: 85%;
+    font-size: 0.9rem; }
+    .form-container .form-row #month {
+      font-size: 0.9rem; }
+    .form-container .form-row #year {
+      font-size: 0.9rem;
+      margin-top: -30px; }
+    .form-container input,
+    .form-container #month,
+    .form-container #year {
+      height: 3em;
+      margin-bottom: 1em; }
+  .card-container {
+    width: 65%;
+    height: 190px;
+    padding: 1em 1.2em; }
+    .card-container .card-top {
+      padding-bottom: 0.1em; }
+      .card-container .card-top .chip-img {
+        width: 55px; }
+      .card-container .card-top .fab {
+        font-size: 2.2rem; }
+    .card-container .card-middle {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0.5em 0 0.1em 0;
+      letter-spacing: 1px; }
+    .card-container .card-bottom {
+      font-size: 0.95rem;
+      margin: 1em 0.5em 0;
+      font-weight: 600;
+      letter-spacing: 0.1em; }
+      .card-container .card-bottom .card-holder::before {
+        content: 'Card Holder';
+        font-size: 0.75rem;
+        color: #bdbec0;
+        display: block; }
+      .card-container .card-bottom .card-date::before {
+        content: 'Expire';
+        font-size: 0.75rem;
+        color: #bdbec0;
+        display: block; } }
+
+@media screen and (max-width: 400px) {
+  .form-container {
+    width: 90%;
+    font-size: 0.9rem; }
+    .form-container .form-row #month {
+      font-size: 0.9rem; }
+    .form-container .form-row #year {
+      font-size: 0.9rem;
+      margin-top: -30px; }
+    .form-container input,
+    .form-container #month,
+    .form-container #year {
+      height: 3em;
+      margin-bottom: 1em; }
+  .card-container {
+    width: 80%;
+    height: 190px;
+    padding: 1em 1.2em; }
+    .card-container .card-top {
+      padding-bottom: 0.1em; }
+      .card-container .card-top .chip-img {
+        width: 55px; }
+      .card-container .card-top .fab {
+        font-size: 2.2rem; }
+    .card-container .card-middle {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0.5em 0 0.1em 0;
+      letter-spacing: 1px; }
+    .card-container .card-bottom {
+      font-size: 0.95rem;
+      margin: 1em 0.5em 0;
+      font-weight: 600;
+      letter-spacing: 0.1em; }
+      .card-container .card-bottom .card-holder::before {
+        content: 'Card Holder';
+        font-size: 0.75rem;
+        color: #bdbec0;
+        display: block; }
+      .card-container .card-bottom .card-date::before {
+        content: 'Expire';
+        font-size: 0.75rem;
+        color: #bdbec0;
+        display: block; } }
