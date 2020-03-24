@@ -15,10 +15,11 @@
   background: linear-gradient(
     142deg,
     rgba(3, 2, 28, 1) 0%,
-    rgba(7, 5, 51, 1) 20%,
-    rgba(2, 0, 28, 1) 31%,
-    rgba(18, 11, 122, 1) 75%,
-    rgba(6, 14, 37, 1) 93%,
+    rgba(2, 0, 28, 1) 1%,
+    rgba(51, 5, 13, 1) 20%,
+    rgba(18, 11, 122, 1) 64%,
+    rgba(84, 12, 27, 1) 83%,
+    rgba(6, 14, 37, 1) 98%,
     rgba(16, 41, 107, 1) 100%
   );
   color: #fff;
@@ -32,6 +33,7 @@
 
     & .chip-img {
       width: 75px;
+      opacity: 0.85;
     }
 
     & .fab {
@@ -45,28 +47,54 @@
     font-weight: 700;
     margin: 0.8em 0 0.6em 0;
     letter-spacing: 2px;
+    width: 320px;
+
+    &.selected {
+      border: 1px solid #e4e1e1;
+      border-radius: 5px;
+    }
   }
 
   & .card-bottom {
     display: flex;
     justify-content: space-between;
     font-size: 1.1rem;
-    margin: 1em 0.5em 0;
+    margin: 0.5em 0.5em 0;
     font-weight: 600;
     letter-spacing: 0.1em;
 
-    & .card-holder::before {
-      content: 'Card Holder';
-      font-size: 0.8rem;
-      color: rgb(189, 190, 192);
-      display: block;
+    & .card-holder {
+      width: 270px;
+      padding: 0.2em 0.5em;
+
+      &.selected {
+        border: 1px solid #e4e1e1;
+        border-radius: 5px;
+      }
+
+      &::before {
+        content: 'Card Holder';
+        font-size: 0.8rem;
+        color: rgb(189, 190, 192);
+        display: block;
+      }
     }
 
-    & .card-date::before {
-      content: 'Expire';
-      font-size: 0.8rem;
-      color: rgb(189, 190, 192);
-      display: block;
+    & .card-date {
+      width: 80px;
+      padding: 0.2em 0.5em;
+
+      &.selected {
+        border: 1px solid #e4e1e1;
+        border-radius: 5px;
+      }
+
+      &::before {
+        content: 'Expire';
+        font-size: 0.8rem;
+        color: rgb(189, 190, 192);
+        display: block;
+      }
     }
   }
 }

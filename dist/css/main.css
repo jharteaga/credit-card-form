@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   background: #03021c;
-  background: linear-gradient(142deg, #03021c 0%, #070533 20%, #02001c 31%, #120b7a 75%, #060e25 93%, #10296b 100%);
+  background: linear-gradient(142deg, #03021c 0%, #02001c 1%, #33050d 20%, #120b7a 64%, #540c1b 83%, #060e25 98%, #10296b 100%);
   color: #fff;
   font-family: 'Inconsolata', monospace; }
   .card-container .card-top {
@@ -21,7 +21,8 @@
     align-items: center;
     padding: 0 0.6em 0 0; }
     .card-container .card-top .chip-img {
-      width: 75px; }
+      width: 75px;
+      opacity: 0.85; }
     .card-container .card-top .fab {
       font-size: 3.2rem; }
   .card-container .card-middle {
@@ -29,24 +30,40 @@
     padding: 0.1em 0 0.1em 0.5em;
     font-weight: 700;
     margin: 0.8em 0 0.6em 0;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    width: 320px; }
+    .card-container .card-middle.selected {
+      border: 1px solid #e4e1e1;
+      border-radius: 5px; }
   .card-container .card-bottom {
     display: flex;
     justify-content: space-between;
     font-size: 1.1rem;
-    margin: 1em 0.5em 0;
+    margin: 0.5em 0.5em 0;
     font-weight: 600;
     letter-spacing: 0.1em; }
-    .card-container .card-bottom .card-holder::before {
-      content: 'Card Holder';
-      font-size: 0.8rem;
-      color: #bdbec0;
-      display: block; }
-    .card-container .card-bottom .card-date::before {
-      content: 'Expire';
-      font-size: 0.8rem;
-      color: #bdbec0;
-      display: block; }
+    .card-container .card-bottom .card-holder {
+      width: 270px;
+      padding: 0.2em 0.5em; }
+      .card-container .card-bottom .card-holder.selected {
+        border: 1px solid #e4e1e1;
+        border-radius: 5px; }
+      .card-container .card-bottom .card-holder::before {
+        content: 'Card Holder';
+        font-size: 0.8rem;
+        color: #bdbec0;
+        display: block; }
+    .card-container .card-bottom .card-date {
+      width: 80px;
+      padding: 0.2em 0.5em; }
+      .card-container .card-bottom .card-date.selected {
+        border: 1px solid #e4e1e1;
+        border-radius: 5px; }
+      .card-container .card-bottom .card-date::before {
+        content: 'Expire';
+        font-size: 0.8rem;
+        color: #bdbec0;
+        display: block; }
 
 * {
   box-sizing: border-box; }
@@ -120,7 +137,8 @@ body {
       font-size: 1.3rem;
       font-weight: 400;
       margin: 0.5em 0 0.1em 0;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      width: 235px; }
     .card-container .card-bottom {
       font-size: 0.95rem;
       margin: 1em 0.5em 0;
@@ -165,7 +183,8 @@ body {
       font-size: 1.3rem;
       font-weight: 400;
       margin: 0.5em 0 0.1em 0;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      width: 228px; }
     .card-container .card-bottom {
       font-size: 0.95rem;
       margin: 1em 0.5em 0;
