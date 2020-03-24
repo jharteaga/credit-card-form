@@ -7,7 +7,7 @@
   box-shadow: -1px 2px 38px 10px rgba(78, 77, 77, 0.81);
   border-radius: 15px;
   position: relative;
-  top: 100px;
+  top: 75px;
   padding: 1em 1.2em;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ body {
   width: 500px;
   max-width: 600px;
   box-shadow: -1px 2px 43px 10px rgba(138, 135, 135, 0.81);
-  padding: 10em 2em 2em 2em;
+  padding: 8em 2em 2em 2em;
   margin-bottom: 12em;
   border-radius: 15px; }
   .form-container button {
@@ -82,7 +82,7 @@ body {
   .form-container input,
   .form-container #month,
   .form-container #year {
-    height: 3em;
+    height: 3.2em;
     margin-bottom: 1.8em; }
 
 @media screen and (max-width: 767px) and (min-width: 500px) {
@@ -94,7 +94,8 @@ body {
 @media screen and (max-width: 499px) {
   .form-container {
     width: 85%;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    padding: 7.2em 2em 2em 2em; }
     .form-container .form-row #month {
       font-size: 0.9rem; }
     .form-container .form-row #year {
@@ -103,8 +104,8 @@ body {
     .form-container input,
     .form-container #month,
     .form-container #year {
-      height: 3em;
-      margin-bottom: 1em; }
+      height: 2.8em;
+      margin-bottom: 0.1em; }
   .card-container {
     width: 65%;
     height: 190px;
