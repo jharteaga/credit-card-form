@@ -1,3 +1,7 @@
+const cardContainer = document.querySelector('.card-container');
+const cardFront = document.querySelector('.card-front');
+const cardBack = document.querySelector('.card-back');
+
 const cardNumber = document.getElementById('cardNumber');
 const digits = document.querySelectorAll('.card-middle span');
 const cardNumArea = document.querySelector('.card-middle');
@@ -10,6 +14,9 @@ const year = document.getElementById('year');
 const cardDateArea = document.querySelector('.card-date');
 const cardMonth = document.querySelector('.card-month');
 const cardYear = document.querySelector('.card-year');
+
+const cvv = document.getElementById('cvv');
+const cvvCard = document.querySelector('.card-cvv');
 
 const form = document.getElementById('form');
 
@@ -33,7 +40,6 @@ function isNumber(value) {
 //Event listeners Card Number
 cardNumber.addEventListener('input', () => {
   let arr = cardNumber.value.split('');
-  console.log;
 
   if ((isNumber(cardNumber.value) && arr.length <= 16) || arr.length === 0) {
     showCardNum(arr);
@@ -109,4 +115,39 @@ year.addEventListener('focusout', () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+});
+
+//Flip card event onfucus
+cvv.addEventListener('focus', () => {
+  cardContainer.classList.add('flip-back');
+  cardContainer.classList.remove('flip-front');
+  setTimeout(() => {
+    cardFront.style.display = 'none';
+    cardBack.style.display = 'block';
+    cvvCard.style.border = '3px solid black';
+  }, 360);
+});
+
+cvv.addEventListener('focusout', () => {
+  cardContainer.classList.remove('flip-back');
+  cardContainer.classList.add('flip-front');
+  setTimeout(() => {
+    cardFront.style.display = 'block';
+    cardBack.style.display = 'none';
+    cvvCard.style.border = 'none';
+  }, 360);
+});
+
+//Event listeners Card Holder
+cvv.addEventListener('input', () => {
+  let arr = cvv.value.split('');
+
+  if ((isNumber(cvv.value) && arr.length <= 4) || arr.length === 0) {
+    cvv.value = arr.join('');
+    cvvCard.textContent = cvv.value;
+  } else {
+    arr.pop();
+    cvv.value = arr.join('');
+    cvvCard.textContent = cvv.value;
+  }
 });
