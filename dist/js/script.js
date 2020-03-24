@@ -21,7 +21,7 @@ const cvvCard = document.querySelector('.card-cvv');
 const form = document.getElementById('form');
 
 const frontFran = document.querySelector('.franchise');
-const backFran = document.querySelector('franchise-back');
+const backFran = document.querySelector('.franchise-back');
 
 //Show typed card number
 function showCardNum(numArr) {
