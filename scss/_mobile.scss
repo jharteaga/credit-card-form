@@ -1,0 +1,153 @@
+@include mediaMd {
+  .form-container {
+    width: 90%;
+
+    & .form-row {
+      & #year {
+        margin-top: -30px;
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  .form-container {
+    width: 85%;
+    font-size: 0.9rem;
+
+    & .form-row {
+      & #month {
+        font-size: 0.9rem;
+      }
+
+      & #year {
+        font-size: 0.9rem;
+        margin-top: -30px;
+      }
+    }
+
+    input,
+    #month,
+    #year {
+      height: 3em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .card-container {
+    width: 65%;
+    height: 190px;
+    padding: 1em 1.2em;
+
+    & .card-top {
+      padding-bottom: 0.1em;
+
+      & .chip-img {
+        width: 55px;
+      }
+
+      & .fab {
+        font-size: 2.2rem;
+      }
+    }
+
+    & .card-middle {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0.5em 0 0.1em 0;
+      letter-spacing: 1px;
+    }
+
+    & .card-bottom {
+      font-size: 0.95rem;
+      margin: 1em 0.5em 0;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+
+      & .card-holder::before {
+        content: 'Card Holder';
+        font-size: 0.75rem;
+        color: rgb(189, 190, 192);
+        display: block;
+      }
+
+      & .card-date::before {
+        content: 'Expire';
+        font-size: 0.75rem;
+        color: rgb(189, 190, 192);
+        display: block;
+      }
+    }
+  }
+}
+
+@include mediaXSm {
+  .form-container {
+    width: 90%;
+    font-size: 0.9rem;
+
+    & .form-row {
+      & #month {
+        font-size: 0.9rem;
+      }
+
+      & #year {
+        font-size: 0.9rem;
+        margin-top: -30px;
+      }
+    }
+
+    input,
+    #month,
+    #year {
+      height: 3em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .card-container {
+    width: 80%;
+    height: 190px;
+    padding: 1em 1.2em;
+
+    & .card-top {
+      padding-bottom: 0.1em;
+
+      & .chip-img {
+        width: 55px;
+      }
+
+      & .fab {
+        font-size: 2.2rem;
+      }
+    }
+
+    & .card-middle {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0.5em 0 0.1em 0;
+      letter-spacing: 1px;
+    }
+
+    & .card-bottom {
+      font-size: 0.95rem;
+      margin: 1em 0.5em 0;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+
+      & .card-holder::before {
+        content: 'Card Holder';
+        font-size: 0.75rem;
+        color: rgb(189, 190, 192);
+        display: block;
+      }
+
+      & .card-date::before {
+        content: 'Expire';
+        font-size: 0.75rem;
+        color: rgb(189, 190, 192);
+        display: block;
+      }
+    }
+  }
+}

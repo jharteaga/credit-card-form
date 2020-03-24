@@ -2,16 +2,25 @@
 
 .card-container {
   width: 380px;
-  height: 210px;
+  height: 240px;
   max-width: 400px;
-  box-shadow: -1px 2px 43px 5px rgba(161, 161, 161, 0.81);
+  box-shadow: -1px 2px 38px 10px rgba(78, 77, 77, 0.81);
   border-radius: 15px;
   position: relative;
   top: 100px;
-  padding: 0.8em 0.8em;
+  padding: 1em 1.2em;
   display: flex;
   flex-direction: column;
-  background-color: rgb(182, 69, 69);
+  background: rgb(3, 2, 28);
+  background: linear-gradient(
+    142deg,
+    rgba(3, 2, 28, 1) 0%,
+    rgba(7, 5, 51, 1) 20%,
+    rgba(2, 0, 28, 1) 31%,
+    rgba(18, 11, 122, 1) 75%,
+    rgba(6, 14, 37, 1) 93%,
+    rgba(16, 41, 107, 1) 100%
+  );
   color: #fff;
   font-family: 'Inconsolata', monospace;
 
@@ -22,47 +31,41 @@
     padding: 0 0.6em 0 0;
 
     & .chip-img {
-      width: 70px;
+      width: 75px;
     }
 
     & .fab {
-      font-size: 2.8rem;
+      font-size: 3.2rem;
     }
   }
 
   & .card-middle {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     padding: 0.1em 0 0.1em 0.5em;
     font-weight: 700;
-    margin: 0.4em 0 0.6em 0;
+    margin: 0.8em 0 0.6em 0;
     letter-spacing: 2px;
-  }
-
-  & .card-labels {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0.8em;
-    font-size: 0.8rem;
   }
 
   & .card-bottom {
     display: flex;
     justify-content: space-between;
-    font-size: 1rem;
-    margin: 0 0.5em;
+    font-size: 1.1rem;
+    margin: 1em 0.5em 0;
     font-weight: 600;
+    letter-spacing: 0.1em;
 
     & .card-holder::before {
       content: 'Card Holder';
       font-size: 0.8rem;
-      color: rgb(194, 196, 199);
+      color: rgb(189, 190, 192);
       display: block;
     }
 
     & .card-date::before {
       content: 'Expire';
       font-size: 0.8rem;
-      color: rgb(208, 209, 212);
+      color: rgb(189, 190, 192);
       display: block;
     }
   }
