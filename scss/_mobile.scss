@@ -36,48 +36,93 @@
   }
 
   .card-container {
-    width: 65%;
-    height: 190px;
-    padding: 1em 1.2em;
+    max-width: 70%;
+    height: 195px;
 
-    & .card-top {
-      padding-bottom: 0.1em;
+    & .card-front {
+      margin: 0;
+      padding: 0;
+      width: 100%;
 
-      & .chip-img {
-        width: 55px;
+      & .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0.5em;
+        padding-bottom: 0;
+        padding-right: 1.5em;
+
+        & .chip-img {
+          width: 70px;
+        }
+
+        & .fab {
+          font-size: 3rem;
+        }
       }
 
-      & .fab {
-        font-size: 2.2rem;
+      & .card-middle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 0.5em 0 0.1em 0.5em;
+        letter-spacing: 1px;
+        width: 245px;
+      }
+
+      & .card-bottom {
+        font-size: 0.95rem;
+        margin: 1em 0.5em 0;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+
+        & .card-holder::before {
+          content: 'Card Holder';
+          font-size: 0.75rem;
+          color: rgb(189, 190, 192);
+          display: block;
+        }
+
+        & .card-date::before {
+          content: 'Expire';
+          font-size: 0.75rem;
+          color: rgb(189, 190, 192);
+          display: block;
+        }
       }
     }
 
-    & .card-middle {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin: 0.5em 0 0.1em 0;
-      letter-spacing: 1px;
-      width: 235px;
-    }
-
-    & .card-bottom {
-      font-size: 0.95rem;
-      margin: 1em 0.5em 0;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-
-      & .card-holder::before {
-        content: 'Card Holder';
-        font-size: 0.75rem;
-        color: rgb(189, 190, 192);
-        display: block;
+    & .card-back {
+      & .card-band {
+        height: 35px;
+        margin-bottom: 1.8em;
+        margin-top: 1.5em;
       }
 
-      & .card-date::before {
-        content: 'Expire';
-        font-size: 0.75rem;
-        color: rgb(189, 190, 192);
-        display: block;
+      & .card-cvv {
+        width: 88%;
+        height: 30px;
+        margin-left: 1.2em;
+        margin-bottom: 0.5em;
+        font-size: 1.1rem;
+        padding-right: 0.3em;
+
+        &::after {
+          content: 'CVV';
+          display: block;
+          text-align: right;
+          color: white;
+          font-size: 0.9rem;
+          position: absolute;
+          top: -20px;
+          left: 90%;
+        }
+      }
+
+      & .franchise-back {
+        font-size: 3rem;
+        align-self: flex-end;
+        padding-right: 0.3em;
+        text-align: right;
       }
     }
   }
@@ -108,48 +153,93 @@
   }
 
   .card-container {
-    width: 80%;
-    height: 190px;
-    padding: 1em 1.2em;
+    max-width: 70%;
+    height: 195px;
 
-    & .card-top {
-      padding-bottom: 0.1em;
+    & .card-front {
+      margin: 0;
+      padding: 0;
+      width: 100%;
 
-      & .chip-img {
-        width: 55px;
+      & .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0.5em;
+        padding-bottom: 0;
+        padding-right: 1.5em;
+
+        & .chip-img {
+          width: 70px;
+        }
+
+        & .fab {
+          font-size: 3rem;
+        }
       }
 
-      & .fab {
-        font-size: 2.2rem;
+      & .card-middle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 0.5em 0 0.1em 0.5em;
+        letter-spacing: 1px;
+        width: 245px;
+      }
+
+      & .card-bottom {
+        font-size: 0.95rem;
+        margin: 1em 0.5em 0;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+
+        & .card-holder::before {
+          content: 'Card Holder';
+          font-size: 0.75rem;
+          color: rgb(189, 190, 192);
+          display: block;
+        }
+
+        & .card-date::before {
+          content: 'Expire';
+          font-size: 0.75rem;
+          color: rgb(189, 190, 192);
+          display: block;
+        }
       }
     }
 
-    & .card-middle {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin: 0.5em 0 0.1em 0;
-      letter-spacing: 1px;
-      width: 228px;
-    }
-
-    & .card-bottom {
-      font-size: 0.95rem;
-      margin: 1em 0.5em 0;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-
-      & .card-holder::before {
-        content: 'Card Holder';
-        font-size: 0.75rem;
-        color: rgb(189, 190, 192);
-        display: block;
+    & .card-back {
+      & .card-band {
+        height: 35px;
+        margin-bottom: 1.8em;
+        margin-top: 1.5em;
       }
 
-      & .card-date::before {
-        content: 'Expire';
-        font-size: 0.75rem;
-        color: rgb(189, 190, 192);
-        display: block;
+      & .card-cvv {
+        width: 85%;
+        height: 30px;
+        margin-left: 1.2em;
+        margin-bottom: 0.5em;
+        font-size: 1rem;
+        padding-right: 0.3em;
+
+        &::after {
+          content: 'CVV';
+          display: block;
+          text-align: right;
+          color: white;
+          font-size: 0.9rem;
+          position: absolute;
+          top: -20px;
+          left: 90%;
+        }
+      }
+
+      & .franchise-back {
+        font-size: 2.6rem;
+        align-self: flex-end;
+        padding-right: 0.4em;
+        text-align: right;
       }
     }
   }

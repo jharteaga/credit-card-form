@@ -89,13 +89,13 @@ name.addEventListener('input', () => {
   let arr = name.value.split('');
   if (arr.length === 0) {
     cardHolder.textContent = 'FULL NAME';
-  } else if (name.value.length <= 20) {
+  } else if (name.value.length <= 19) {
     cardHolder.textContent = name.value.toUpperCase();
     name.value = name.value.toUpperCase();
   } else {
     arr.pop();
     name.value = arr.join('');
-    cardHolder.textContent = name.value.substring(0, 20).toUpperCase();
+    cardHolder.textContent = name.value.substring(0, 19).toUpperCase();
   }
 });
 
@@ -149,7 +149,6 @@ cvv.addEventListener('focus', () => {
   setTimeout(() => {
     cardFront.style.display = 'none';
     cardBack.style.display = 'block';
-    cvvCard.style.border = '3px solid black';
   }, 360);
 });
 
@@ -159,7 +158,6 @@ cvv.addEventListener('focusout', () => {
   setTimeout(() => {
     cardFront.style.display = 'block';
     cardBack.style.display = 'none';
-    cvvCard.style.border = 'none';
   }, 360);
 });
 
