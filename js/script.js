@@ -11,6 +11,8 @@ const cardDateArea = document.querySelector('.card-date');
 const cardMonth = document.querySelector('.card-month');
 const cardYear = document.querySelector('.card-year');
 
+const form = document.getElementById('form');
+
 //Show typed card number
 function showCardNum(numArr) {
   for (let i = 0; i < 16; i++) {
@@ -47,6 +49,10 @@ cardNumber.addEventListener('focus', () => {
   cardDateArea.classList.remove('selected');
 });
 
+cardNumber.addEventListener('focusout', () => {
+  cardNumArea.classList.remove('selected');
+});
+
 //Event listeners Card Holder
 name.addEventListener('input', () => {
   let arr = name.value.split('');
@@ -68,6 +74,10 @@ name.addEventListener('focus', () => {
   cardDateArea.classList.remove('selected');
 });
 
+name.addEventListener('focusout', () => {
+  cardHolder.classList.remove('selected');
+});
+
 //Event listeners Card Date
 month.addEventListener('change', () => {
   cardMonth.textContent = month.value;
@@ -79,6 +89,10 @@ month.addEventListener('focus', () => {
   cardDateArea.classList.add('selected');
 });
 
+month.addEventListener('focusout', () => {
+  cardDateArea.classList.remove('selected');
+});
+
 year.addEventListener('change', () => {
   cardYear.textContent = year.value;
 });
@@ -87,4 +101,12 @@ year.addEventListener('focus', () => {
   cardNumArea.classList.remove('selected');
   cardHolder.classList.remove('selected');
   cardDateArea.classList.add('selected');
+});
+
+year.addEventListener('focusout', () => {
+  cardDateArea.classList.remove('selected');
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 });
