@@ -173,7 +173,71 @@ body {
   .form-container {
     width: 90%; }
     .form-container .form-row #year {
-      margin-top: -30px; } }
+      margin-top: -30px; }
+  .card-container {
+    max-width: 70%;
+    height: 195px; }
+    .card-container .card-front {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      .card-container .card-front .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0.5em;
+        padding-bottom: 0;
+        padding-right: 1.5em; }
+        .card-container .card-front .card-top .chip-img {
+          width: 70px; }
+        .card-container .card-front .card-top .fab {
+          font-size: 3rem; }
+      .card-container .card-front .card-middle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 0.5em 0 0.1em 0.5em;
+        letter-spacing: 1px;
+        width: 245px; }
+      .card-container .card-front .card-bottom {
+        font-size: 0.95rem;
+        margin: 1em 0.5em 0;
+        font-weight: 600;
+        letter-spacing: 0.1em; }
+        .card-container .card-front .card-bottom .card-holder::before {
+          content: 'Card Holder';
+          font-size: 0.75rem;
+          color: #bdbec0;
+          display: block; }
+        .card-container .card-front .card-bottom .card-date::before {
+          content: 'Expire';
+          font-size: 0.75rem;
+          color: #bdbec0;
+          display: block; }
+    .card-container .card-back .card-band {
+      height: 35px;
+      margin-bottom: 1.8em;
+      margin-top: 1.5em; }
+    .card-container .card-back .card-cvv {
+      width: 88%;
+      height: 30px;
+      margin-left: 1.2em;
+      margin-bottom: 0.5em;
+      font-size: 1.1rem;
+      padding-right: 0.3em; }
+      .card-container .card-back .card-cvv::after {
+        content: 'CVV';
+        display: block;
+        text-align: right;
+        color: white;
+        font-size: 0.9rem;
+        position: absolute;
+        top: -20px;
+        left: 90%; }
+    .card-container .card-back .franchise-back {
+      font-size: 3rem;
+      align-self: flex-end;
+      padding-right: 0.3em;
+      text-align: right; } }
 
 @media screen and (max-width: 499px) {
   .form-container {
