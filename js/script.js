@@ -147,8 +147,8 @@ cvv.addEventListener('focus', () => {
   cardContainer.classList.add('flip-back');
   cardContainer.classList.remove('flip-front');
   setTimeout(() => {
-    cardFront.style.display = 'none';
-    cardBack.style.display = 'block';
+    cardFront.style.visibility = 'hidden';
+    cardBack.style.visibility = 'visible';
   }, 360);
 });
 
@@ -156,8 +156,8 @@ cvv.addEventListener('focusout', () => {
   cardContainer.classList.remove('flip-back');
   cardContainer.classList.add('flip-front');
   setTimeout(() => {
-    cardFront.style.display = 'block';
-    cardBack.style.display = 'none';
+    cardFront.style.visibility = 'visible';
+    cardBack.style.visibility = 'hidden';
   }, 360);
 });
 
