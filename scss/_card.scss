@@ -161,11 +161,11 @@
 }
 
 .flip-back {
-  animation: trans-back 0.7s ease-in-out forwards;
+  animation: trans-back 0.7s linear forwards;
 }
 
 .flip-front {
-  animation: trans-front 0.7s ease-in-out forwards;
+  animation: trans-front 0.7s linear forwards;
 }
 
 @keyframes trans-back {
