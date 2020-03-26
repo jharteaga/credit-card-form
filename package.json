@@ -10,6 +10,7 @@
   "author": "Jose Arteaga",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^9.7.5",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "sass": "^1.26.3"
